@@ -1,0 +1,62 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.main{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  background-color: aqua;
+}
+@mixin resent-list {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  background-color: aqua;
+}
+@mixin flex($borderradius,$padding,$margin,$backgroundcolor,$width) {
+ border-radius: $borderradius;
+ padding: $padding;
+ margin: $margin;
+ width: $width; 
+ background-color: $backgroundcolor;
+}
+header ul{
+  @include resent-list;
+  
+  li{
+    @include flex(5px,20px, 20px,pink,100%,)
+  }
+}
+.box {
+ width: 100%;
+ height: 50px;
+  @extend .main}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
+@mixin child {
+  width: 50px;
+  height: 45px;
+  background-color: hotpink;
+}
+.parent{
+  width: 100%;
+  height: 250px;
+  @extend .main
+}
